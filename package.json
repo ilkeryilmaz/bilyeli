@@ -1,0 +1,58 @@
+{
+  "name": "bilyeli",
+  "version": "0.0.1",
+  "description": "Simple react webpack project starter",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "dev": "webpack-dashboard -t 'Bilyeli' -- webpack-dev-server",
+    "build": "rm -rf ./build && NODE_ENV=\"production\" webpack",
+    "preview": "rm -rf ./build && NODE_ENV=\"production\" webpack-dashboard -t 'Preview Mode' -- webpack-dev-server"
+  },
+  "repository": "https://github.com/ilkeryilmaz/bilyeli.git",
+  "keywords": [
+    "react",
+    "redux",
+    "webpack 2",
+    "sass",
+    "boilerplate"
+  ],
+  "author": "ilker Yılmaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilkeryilmaz/bilyeli/issues"
+  },
+  "homepage": "https://github.com/ilkeryilmaz/bilyeli",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.2.0",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^2.2.1",
+    "webpack-dashboard": "^0.4.0",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-helmet": "^5.1.3",
+    "react-router-dom": "^4.1.2"
+  }
+}

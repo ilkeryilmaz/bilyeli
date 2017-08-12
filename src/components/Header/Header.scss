@@ -1,0 +1,28 @@
+.header {
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding: 0.75rem;
+
+  h1 {
+    position: absolute;
+    bottom: 70px;
+    left: 43px;
+    color: #2d2d30;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+  }
+}
