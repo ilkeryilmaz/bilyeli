@@ -5,7 +5,7 @@ import s from './AppLayout.scss';
 
 export default function AppLayout({ children }) {
   return (
-    <div className={s.layout}>
+    <div className={ s.layout }>
       {children}
     </div>
   );

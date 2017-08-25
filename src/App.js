@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import Routes from './config/routes';
 
 // Layouts
-import AppLayout, { Content } from './components/AppLayout';
+import AppLayout from './components/AppLayout';
+import Content from './components/Content';
 import Container from './components/Container';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
