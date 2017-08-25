@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-// Routes
-import Home from './../routes/Home';
-import About from './../routes/About';
-import Contact from './../routes/Contact';
-import NotFound from './../routes/NotFound';
+// Containers
+import Home from './../containers/Home';
+import About from './../containers/About';
+import Contact from './../containers/Contact';
+import NotFound from './../containers/NotFound';
 
 const publicPath = '/';
 
