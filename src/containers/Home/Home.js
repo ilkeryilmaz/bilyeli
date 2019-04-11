@@ -1,30 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 
 export default class Home extends Component {
-  constructor() {
-    super();
-
-    this.handleTestButtonClick = this.handleTestButtonClick.bind(this);
-  }
-
-  handleTestButtonClick() {
-    alert('Congratulations 👏');
-  }
+  handleTestButtonClick = () => {
+    alert('click');
+  };
 
   render() {
     return (
-      <div>
-        <Helmet>
-          <title>Home</title>
-        </Helmet>
-
+      <Fragment>
         <h1>Home</h1>
-        <button onClick={ this.handleTestButtonClick }>
-          Click Me
-        </button>
-      </div>
+        <button type='button' onClick={ this.handleTestButtonClick }>Click Me</button>
+      </Fragment>
     );
   }
 }

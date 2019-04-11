@@ -1,15 +1,16 @@
 {
+    "parser": "babel-eslint",
     "extends": [
         "airbnb"
     ],
-    "env": {
-        "browser": true
-    },
     "plugins": [
         "react",
         "jsx-a11y",
         "import"
     ],
+    "env": {
+        "browser": true
+    },
     "rules": {
       "class-methods-use-this": 0,
       "jsx-quotes": [2, "prefer-single"],
