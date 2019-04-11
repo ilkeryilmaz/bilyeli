@@ -11,27 +11,34 @@ class Home extends Component {
     decrement: PropTypes.func.isRequired,
   };
 
+  state = {
+    title: 'Home',
+    slogan: 'Boilerplate for React/Redux app.',
+  }
+
   render() {
+    const { title, slogan } = this.state;
     const { counter, increment, decrement } = this.props;
 
     return (
       <Fragment>
-        <h1>Bilyeli</h1>
-        <p>Boilerplate for React/Redux app.</p>
+        <h1>{ title }</h1>
+        <p>{ slogan }</p>
 
         <h2>Examples:</h2>
-
-        <h3>Redux:</h3>
-        <button type='button' onClick={ increment }>+</button>
-        <span>{ counter }</span>
-        <button type='button' onClick={ decrement }>-</button>
+        <section>
+          <h3>Redux Thunk and Immutable:</h3>
+          <button type='button' onClick={ increment }>+</button>
+          <span>{ counter }</span>
+          <button type='button' onClick={ decrement }>-</button>
+        </section>
       </Fragment>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  counter: state.appReducer.counter,
+  counter: state.appReducer.get('counter'),
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(AppActionCreators, dispatch);

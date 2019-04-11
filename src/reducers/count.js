@@ -1,22 +1,26 @@
+import { Map } from 'immutable';
 import { INCREMENT, DECREMENT } from 'actions/count';
 
-const initialState = {
+const initialState = Map({
   counter: 0,
-};
+});
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-      return {
-        counter: state.counter + 1,
-      };
+      // eslint-disable-next-line no-case-declarations
+      const counterInc = state.get('counter') + 1;
+
+      return state.merge(Map({
+        counter: counterInc,
+      }));
     case DECREMENT:
-      if (state.counter === 0) {
-        return state;
-      }
-      return {
-        counter: state.counter - 1,
-      };
+      // eslint-disable-next-line no-case-declarations
+      const counterDec = state.get('counter') - 1;
+
+      return state.merge(Map({
+        counter: counterDec,
+      }));
     default:
       return state;
   }

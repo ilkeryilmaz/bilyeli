@@ -1,5 +1,8 @@
 Bilyeli
 ---
+<p align="center">
+  <img src="src/assets/img/logo.svg" alt="Bilyeli" />
+</p>
 
 Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date, always simple.
 
@@ -7,8 +10,7 @@ Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date,
 
  - [x] React
  - [x] React router v4
- - [x] React helmet
- - [x] Webpack 2 (development and production config)
+ - [x] Webpack 4 (development and production config)
  - [x] Webpack dashboard
  - [x] Hot module replacement
  - [x] Babel

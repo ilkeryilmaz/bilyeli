@@ -9,7 +9,7 @@ export default class Header extends Component {
       <header>
         <div>
           <h1>Bilyeli</h1>
-          <img src={ LogoImg } alt='Bilyeli' width='150px' />
+          <p>Boilerplate for React/Redux app.</p>
         </div>
         { this.props.children }
       </header>
