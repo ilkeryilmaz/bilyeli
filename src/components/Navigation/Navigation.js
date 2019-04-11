@@ -6,8 +6,8 @@ import { routeCodes } from 'config/routes';
 
 const Navigation = () => (
   <nav>
-    <Link to={ routeCodes.HOME }>Home</Link>
-    <Link to={ routeCodes.DETAIL }>Detail</Link>
+    <Link to={routeCodes.HOME}>Home</Link>
+    <Link to={routeCodes.DETAIL}>Detail</Link>
   </nav>
 );
 

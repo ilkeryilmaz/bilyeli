@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Content({ children }) {
-  return (
-    <main>
-      {children}
-    </main>
-  );
-}
+const Content = ({ children }) => <main>{children}</main>;
 
 Content.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
+
+export default Content;

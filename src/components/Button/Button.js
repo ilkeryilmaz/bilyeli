@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 const Button = ({ props }) => {
   const { label } = props;
   return (
-    <div>
-      <button className='button'>{ label }</button>
-    </div>
+    <button type='button' className='button'>
+      {label}
+    </button>
   );
 };
 
 Button.propTypes = {
   props: PropTypes.object,
-  label: PropTypes.string,
+  label: PropTypes.string
 };
 
 export default Button;
