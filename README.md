@@ -1,15 +1,15 @@
 Bilyeli
 ---
-<p align="center">
-  <img src="src/assets/img/logo.svg" alt="Bilyeli" />
-</p>
-
 Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date, always simple.
 
- ## Features
+<p align="center">
+  <img src="src/assets/img/logo.svg" alt="Bilyeli" style="width: 400px;" />
+</p>
 
+## Features
  - [x] React
- - [x] React router v4
+ - [x] React router v5
+ - [x] Redux thunk
  - [x] Webpack 4 (development and production config)
  - [x] Webpack dashboard
  - [x] Hot module replacement
@@ -19,9 +19,9 @@ Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date,
  - [x] Airbnb eslint
  - [x] Preview production
 
- ## Setup
+## Setup
 
-## Install
+### Install
 
  ```
  $ npm install
@@ -31,26 +31,26 @@ Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date,
  $ yarn install
  ```
 
-## Running in dev mode
+### Running in dev mode
 
 ```
 $ npm start
 ```
 
-### Running it with [webpack dashboard](https://github.com/FormidableLabs/webpack-dashboard)
+#### Running it with [webpack dashboard](https://github.com/FormidableLabs/webpack-dashboard)
 
 ```
 $ npm run dev
 ```
 
-## Build (production)
+### Build (production)
 
 Build will be placed in the `build` folder.
 ```
 $ npm run build
 ```
 
-## Production preview
+### Production preview
 
 Preview the `build` folder.
 ```
