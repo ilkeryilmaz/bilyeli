@@ -96,6 +96,10 @@ if (IS_PRODUCTION) {
         },
         {
           loader: 'sass-loader',
+          options: {
+            data: '@import "assets/styles/_global.scss";',
+            includePaths: [__dirname, 'src'],
+          },
         },
       ],
     }),
