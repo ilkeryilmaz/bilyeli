@@ -1,6 +1,6 @@
 {
   "name": "bilyeli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple react webpack project starter",
   "main": "src/index.js",
   "scripts": {
