@@ -19,6 +19,7 @@ Bilyeli is a minimal boilerplate for modern React app builds. Always up-to-date,
 - [x] File loader (png,gif,jpg,svg)
 - [x] Airbnb eslint
 - [x] Prettier
+- [x] Storybook
 - [x] Jest with enzyme
 - [x] Preview production
 
@@ -62,6 +63,14 @@ Build will be placed in the `build` folder.
 
 ```
 $ npm run build
+```
+
+### Build storybook (production)
+
+Build will be placed in the `.out-storybook` folder.
+
+```
+$ npm run build:storybook
 ```
 
 ### Production preview
