@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 // Layouts
-import Header from './components/Header';
+import Header from 'components/Header';
 
 // Config
-import store from './config/store';
-import Routes from './config/routes';
+import store from 'config/store';
+import Routes from 'config/routes';
 
 // Common Styles
 import './assets/styles/app.scss';
