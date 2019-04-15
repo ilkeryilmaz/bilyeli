@@ -12,31 +12,31 @@ const IS_DEVELOPMENT = NODE_ENV === 'development';
 const paths = {
   source: path.join(__dirname, '../src'),
   assets: path.join(__dirname, '../src/assets/'),
-  svg: path.join(__dirname, '../src/assets/svg'),
   img: path.join(__dirname, '../src/assets/img'),
   build: path.join(__dirname, '../build'),
 };
 
-
-const entry = [
-  path.join(paths.source, 'index.js'),
-];
+const entry = [path.join(paths.source, 'index.js')];
 
 const resolve = {
   modules: [path.resolve(__dirname, '../src'), 'node_modules'],
+  alias: {
+    Assets: path.resolve(__dirname, '../src/assets'),
+  },
 };
 
+/**
+ * Dev Env.
+ */
 const devServer = {
   contentBase: IS_PRODUCTION ? paths.build : paths.source,
   historyApiFallback: true,
-  port: 3000,
+  port: 8080,
   compress: IS_PRODUCTION,
   inline: !IS_PRODUCTION,
   hot: !IS_PRODUCTION,
-  host: '127.0.0.1',
   disableHostCheck: true,
 };
-
 
 /**
  * Plugins
@@ -64,9 +64,7 @@ const rules = [
   {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: [
-      'babel-loader',
-    ],
+    use: ['babel-loader'],
   },
   {
     test: /\.(png|jpg|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -84,39 +82,26 @@ const rules = [
 
 if (IS_PRODUCTION) {
   // Production plugins
-  plugins.push(
-    new ExtractTextPlugin('app-[hash].css')
-  );
+  plugins.push(new ExtractTextPlugin('app-[hash].css'));
 
   // Production rules
-  rules.push(
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader?modules=true&camelCase=true!sass-loader',
-      })
-    }
-  )
+  rules.push({
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: 'css-loader?camelCase=true!sass-loader',
+    }),
+  });
 } else {
   // Development plugins
-  plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin()
-  )
+  plugins.push(new webpack.HotModuleReplacementPlugin(), new DashboardPlugin());
 
   // Development rules
-  rules.push(
-    {
-      test: /\.scss$/,
-      exclude: /node_modules/,
-      use: [
-        'style-loader',
-        'css-loader?modules=true&camelCase=true',
-        'sass-loader?sourceMap',
-      ],
-    }
-  )
+  rules.push({
+    test: /\.scss$/,
+    exclude: /node_modules/,
+    use: ['style-loader', 'css-loader?camelCase=true', 'sass-loader?sourceMap'],
+  });
 }
 
 /**

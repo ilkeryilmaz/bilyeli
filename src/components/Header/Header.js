@@ -1,18 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Header.scss';
+
 const Header = ({ children }) => (
-  <Fragment>
+  <header className='header'>
     <div>
       <h1>Bilyeli</h1>
       <p>Boilerplate for React/Redux app.</p>
     </div>
     <div>{children}</div>
-  </Fragment>
+  </header>
 );
 
 Header.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Header;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders markup correctly 1`] = `
+<button
+  className="button"
+  type="button"
+>
+  Submit
+</button>
+`;
+
+exports[`Path renders markup correctly 1`] = `
+<button
+  className="button"
+  type="button"
+>
+  Submit
+</button>
+`;

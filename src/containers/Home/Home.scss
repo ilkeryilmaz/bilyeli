@@ -1,0 +1,32 @@
+.section {
+  padding: 25px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eaecef;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  &__box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #eaecef;
+    border-radius: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+}

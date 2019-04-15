@@ -1,17 +1,30 @@
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
-import React, { Component, Fragment } from 'react';
+import { routeCodes } from 'config/routes';
 
-class Subpage extends Component {
-  render() {
-    return (
-      <Fragment>
-        <h1>Subpage</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet</p>
-      </Fragment>
-    );
-  }
-}
+const Subpage = () => {
+  return (
+    <Fragment>
+      <h2>Subpage</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius cupiditate quasi odit
+        praesentium voluptas laudantium, facilis dignissimos consequuntur adipisci nisi inventore
+        aperiam tempore error, ducimus vitae. Nemo, laborum reprehenderit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius cupiditate quasi odit
+        praesentium voluptas laudantium, facilis dignissimos consequuntur adipisci nisi inventore
+        aperiam tempore error, ducimus vitae. Nemo, laborum reprehenderit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius cupiditate quasi odit
+        praesentium voluptas laudantium, facilis dignissimos consequuntur adipisci nisi inventore
+        aperiam tempore error, ducimus vitae. Nemo, laborum reprehenderit.
+      </p>
+      <Link to={routeCodes.HOME}>Back to home</Link>
+    </Fragment>
+  );
+};
 
 export default Subpage;

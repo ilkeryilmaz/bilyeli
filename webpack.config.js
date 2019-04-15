@@ -11,7 +11,6 @@ const {
   devServer,
 } = require('./webpack/config');
 
-
 module.exports = {
   mode: IS_PRODUCTION ? 'production' : 'development',
   devtool: IS_PRODUCTION ? false : 'source-map',

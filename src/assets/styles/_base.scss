@@ -1,11 +1,10 @@
 @font-face {
   font-family: robotobold;
   src: url(/fonts/roboto-bold-webfont.eot?v=2);
-  src:
-    url(/fonts/roboto-bold-webfont.eot?#iefix) format("embedded-opentype"),
-    url(/fonts/roboto-bold-webfont.woff) format("woff"),
-    url(/fonts/roboto-bold-webfont.ttf) format("truetype"),
-    url(/fonts/roboto-bold-webfont.svg#robotobold) format("svg");
+  src: url(/fonts/roboto-bold-webfont.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/roboto-bold-webfont.woff) format('woff'),
+    url(/fonts/roboto-bold-webfont.ttf) format('truetype'),
+    url(/fonts/roboto-bold-webfont.svg#robotobold) format('svg');
   font-style: normal;
   font-weight: 400;
 }
@@ -23,4 +22,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
 }

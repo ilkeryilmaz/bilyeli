@@ -1,8 +1,15 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+import Button from 'components/Button';
 import * as AppActionCreators from 'actions/count';
+import { routeCodes } from 'config/routes';
+
+import Logo from 'Assets/img/logo.svg';
+import './Home.scss';
 
 class Home extends Component {
   static propTypes = {
@@ -12,25 +19,37 @@ class Home extends Component {
   };
 
   state = {
-    title: 'Home',
-    slogan: 'Boilerplate for React/Redux app.',
-  }
+    title: 'Examples',
+  };
 
   render() {
-    const { title, slogan } = this.state;
+    const { title } = this.state;
     const { counter, increment, decrement } = this.props;
 
     return (
       <Fragment>
-        <h1>{ title }</h1>
-        <p>{ slogan }</p>
-
-        <h2>Examples:</h2>
-        <section>
-          <h3>Redux Thunk and Immutable:</h3>
-          <button type='button' onClick={ increment }>+</button>
-          <span>{ counter }</span>
-          <button type='button' onClick={ decrement }>-</button>
+        <h1>{title}</h1>
+        <section className='section'>
+          <h3 className='section__title'>React Router:</h3>
+          <Link to={routeCodes.DETAIL}>Go to subpage</Link>
+        </section>
+        <section className='section'>
+          <h3 className='section__title'>Redux Thunk with Immutable:</h3>
+          <Button primary handleClick={increment}>
+            +
+          </Button>
+          <span>{counter}</span>
+          <Button secondary handleClick={decrement}>
+            -
+          </Button>
+        </section>
+        <section className='section'>
+          <h3 className='section__title'>Css with scss:</h3>
+          <div className='section__box' />
+        </section>
+        <section className='section'>
+          <h3 className='section__title'>File loader (png, jpg, gif, ttf, eot, svg, woff):</h3>
+          <img src={Logo} alt='Logo' width='150' />
         </section>
       </Fragment>
     );
