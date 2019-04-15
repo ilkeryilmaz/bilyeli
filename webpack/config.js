@@ -89,7 +89,15 @@ if (IS_PRODUCTION) {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      use: 'css-loader?camelCase=true!sass-loader',
+      use: [
+        {
+          loader: 'css-loader',
+          options: { camelCase: true },
+        },
+        {
+          loader: 'sass-loader',
+        },
+      ],
     }),
   });
 } else {
@@ -100,7 +108,23 @@ if (IS_PRODUCTION) {
   rules.push({
     test: /\.scss$/,
     exclude: /node_modules/,
-    use: ['style-loader', 'css-loader?camelCase=true', 'sass-loader?sourceMap'],
+    use: [
+      {
+        loader: 'style-loader',
+      },
+      {
+        loader: 'css-loader',
+        options: { camelCase: true },
+      },
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+          data: '@import "assets/styles/_global.scss";',
+          includePaths: [__dirname, 'src'],
+        },
+      },
+    ],
   });
 }
 

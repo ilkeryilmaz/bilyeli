@@ -8,10 +8,10 @@
   outline: none;
 
   &--primary {
-    background: #2fbbf9;
+    background: $primary;
   }
 
   &--secondary {
-    background: #8bc34a;
+    background: $secondary;
   }
 }
