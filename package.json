@@ -85,7 +85,7 @@
       "<rootDir>/src"
     ],
     "setupFiles": [
-      "./jestsetup.js"
+      "./test-setup.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
