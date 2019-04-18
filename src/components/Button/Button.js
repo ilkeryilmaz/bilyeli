@@ -5,7 +5,7 @@ import cx from 'classnames';
 import './Button.scss';
 
 const Button = ({ children, ...props }) => {
-  const { primary, secondary, className, handleClick } = props;
+  const { primary, secondary, className } = props;
 
   const classNames = cx(
     'button',
@@ -14,7 +14,7 @@ const Button = ({ children, ...props }) => {
   );
 
   return (
-    <button type='button' className={classNames} onClick={handleClick}>
+    <button type='button' className={classNames} {...props}>
       {children}
     </button>
   );

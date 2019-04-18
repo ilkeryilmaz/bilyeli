@@ -1,17 +1,20 @@
 .button {
   padding: 10px 15px;
   border: none;
-  color: #fff;
+  color: $primary;
   cursor: pointer;
+  background: #f7f7f7;
   font-weight: 600;
   border-radius: 5px;
   outline: none;
 
   &--primary {
+    color: #fff;
     background: $primary;
   }
 
   &--secondary {
+    color: #fff;
     background: $secondary;
   }
 }
